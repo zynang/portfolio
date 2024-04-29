@@ -18,12 +18,12 @@ Change your color here
 ////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 :root {
-    --primary-color: pink;
+    --primary-color: #FFE8F6;
     --secondary-color: 	#b1d697;
 }
 
 ::selection {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     background: var(--primary-color)
 }
 
@@ -50,9 +50,20 @@ h6 {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
-    cursor: pointer
+    cursor: pointer;
+}
+
+.not-header{
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.not-header:hover{
+    color:inherit;
 }
 
 a:hover {
@@ -88,8 +99,8 @@ a.link:hover::before {
 
 
 .space-md {
-    padding-top: 90px;
-    padding-bottom: 90px
+    padding-top: 30px;
+    padding-bottom: 30px
 }
 
 #preloader {
@@ -227,7 +238,8 @@ Header intro
 }
 
 .headline-content .headline-title {
-    font-weight: 900
+    font-weight: 900;
+    margin-bottom: 20px;
 }
 
 .headline-subtitle {
@@ -314,7 +326,7 @@ Header intro
     bottom: 0;
     left: 0;
     z-index: 1;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all .2s ease-in-out;
@@ -380,18 +392,6 @@ Header intro
     top: 0
 }
 
-.project-intro li {
-    font-size: 18px;
-    color: #000000;
-    padding: 12px 0 13px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    max-width: 200px
-}
-
-.project-intro li.title {
-    font-weight: 700;
-    padding: 0px 0 22px;
-}
 
 
 /* Footer */
@@ -437,4 +437,51 @@ Header intro
 .social{
     font-weight: 600;
     color: black;
+}
+
+/* Content */
+.img-fluid{
+    border-radius: 20px;
+    border: solid var(--secondary-color) 3px;
+}
+
+.summary{
+    border: transparent;
+    width: 80%;
+
+}
+.content-list{
+    margin-bottom: 40px;
+}
+
+
+.project-intro{
+    border-right: solid var(--primary-color) 5px;
+    padding-right: 20px;
+    
+}
+.project-intro li {
+    font-size: 18px;
+    color: #000000;
+    padding: 12px 0 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    max-width: 200px
+}
+
+.project-intro li.title {
+    font-weight: 700;
+    padding: 0px 0 22px;
+}
+
+
+.multi-use li {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 0 13px;
+    font-family: "Muli", sans-serif;
+}
+
+.multi-use li.title {
+    font-weight: 400;
+    padding: 0px 0 22px;
 }
