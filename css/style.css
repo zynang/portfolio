@@ -246,6 +246,31 @@ Header intro
     font-size: 24px
 }
 
+.about-me-header h2{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.about-me{
+    margin-top: 40px;
+    border: 0px transparent;
+}
+
+.photo-gallery{
+    margin-top: 70px;
+}
+
+.image-container {
+    padding: 10px; /* Adds space around the image */
+    display: flex;
+    justify-content: center; /* Centers the image in the column */
+}
+.image-container img {
+    max-width: 80%; /* Reduces the maximum width of the image to 80% of the container */
+    height: auto; /* Keeps the image ratio */
+}
+
+
 
 /* Portfolio */
 
@@ -442,7 +467,7 @@ Header intro
 /* Content */
 .img-fluid{
     border-radius: 20px;
-    border: solid var(--secondary-color) 3px;
+    border: solid var(--primary-color) 5px;
 }
 
 .summary{
