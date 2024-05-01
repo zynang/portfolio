@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="index.html">Portfolio</a> </li>
-                        <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="contact.html">About</a> </li>
+                        <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="about.html">About</a> </li>
                         <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="https://drive.google.com/file/d/1fxEwgJT9A2oBcxfwfxvrIaOB9RIoyRux/view?usp=sharing">Resume</a> </li>
                     </ul>
                 </div>
@@ -36,58 +36,95 @@
         </nav>
     <header class="space-md">
         <div class="container">
-            <div class="row d-flex align-content-center">
+            <div class="row d-flex align-items-center">
+                <!-- Left Column for Text Boxes -->
                 <div class="col-md-6">
-                    <div class="headline mt-0 mb-0">
+                    <!-- Text Box 1: Headline and Subtitle -->
+                    <div class="headline mt-0 mb-3"> <!-- Adjust margin as needed -->
                         <div class="headline-content">
-                            <h1 class="headline-title display-3">A digital agency for 
-                                    brands.</h1>
-                            <p class="headline-subtitle">We collaborate with ambitious people.Let’s build something great.</p>
+                            <h1 class="headline-title display-3">Uno Health</h1>
+                            <p class="headline-subtitle">Designing a new way for caregivers to assist members on their Uno Health journey.</p>
                         </div>
                     </div>
+                    <!-- Text Box 2: Project Description -->
+                    <p class="lead">
+                        In this project, I worked with three other students to design a way for caregivers to be involved in the medicare enrollment journey of Uno Health members. Such a capability would allow members that are less tech savvy to navigate the digital process with greater ease.
+                    </p>
                 </div>
+            
+                <!-- Right Column for Video -->
                 <div class="col-md-6">
-                    <p class="lead mt-3"> In an industry where so many brands look and sound quite similar, offering something bold and distinctive ensures; internal audiences have a proud symbol to rally behind, empowering staff to be confident and singular</p>
-                    <p class="lead">in purpose; while external audiences (partners in particular) take notice, with a far higher likelihood of remembering the organisation and what they stand for. </p>
+                    <div style="position: relative; padding-bottom: 56.84210526315789%; height: 0;">
+                        <iframe src="https://www.loom.com/embed/4ad33165524447fb889548e92bb0d542?sid=eaab80b8-42e4-4566-a8bc-56c45a25998e" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                        </iframe>
+                    </div>
                 </div>
             </div>
+
         </div>
     </header>
     <section class="space-md">
         <div class="container">
-            <figure> <img src="img/photo-1516638022313-53fa45a84c7f.jpg" alt="" class="img-fluid"> </figure>
             <div class="row d-flex justify-content-start space-md">
-                <div class="col-md-2">
+                <div class="col-md-2 content-list">
                     <ul class="list-unstyled project-intro">
-                        <li class="title">What We Did</li>
-                        <li>Branding</li>
-                        <li>Website Design</li>
-                        <li>Website Development</li>
-                        <li>illustration</li>
+                        <li><b>Date:</b> April 2024</li>
+                        <li><b>Role:</b> Product Designer</li>
+                        <li><b>Tools:</b> Figma</li>
+                        <li><b>Team:</b> Alejandro Jackson, Joshua Lim, Joe Maffa</li>
                     </ul>
                 </div>
-                <div class="col-md-7 offset-md-1">
-                    <p class="h4"> In an industry where so many brands look and sound quite similar, offering something bold and distinctive ensures; internal audiences have a proud symbol to rally behind, empowering staff to be confident and singular</p>
+                <div class="col-md-8 offset-md-1">
+                    <p class="h3">Background</p>
+                    <p class="lead mt-3">I love movies and the power they have to transport you to a whole new world. (My favorite movie is the Grand Budapest Hotel, a whimsical comedy mystery!) Out of a personal desire to remember the movies that I've seen and loved, I set out to create a web app that would serve as a movie repository.</p>
+                </div>
+                <div class="col-md-11">
+                    <p class="h3">Research</p>
+                    <p class="lead mt-3"> I began my development process by first analyzing different websites, which helped me figure out what I liked about different 'favoriting' designs. I looked at Uniqlo, Spotify and Facebook-- and came up with a list of what worked / what did not for each of them. </p>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <figure> <img src="img/photo-1500281781950-6cd80847ebcd.jpg" alt="" class="img-fluid"> </figure>
+            <figure class="text-center">
+                <div class="row">
+                    <div class="col-md-3">
+                        <figure> <img src="img/spotify.png" alt="" class="img-fluid"> </figure>
+                    </div>
+                    <div class="col-md-3">
+                        <figure> <img src="img/uniqlo.png" alt="" class="img-fluid"> </figure>
+                    </div>
+                    <div class="col-md-3">
+                        <figure> <img src="img/facebook.png" alt="" class="img-fluid"> </figure>
+                    </div>
+                </div>
+            </figure>
+           
+            <div class="row space-md">
+                <div class="col-md-11">
+                    <p class="h3">Design</p>
+                    <p class="lead mt-3">Based of this review, I decided to implement the following features in my own design: </p> 
+                    <div class="col-md-12">
+                        <ol class="multi-use">
+                            <li>1-click process of “favoriting” and “unfavoriting” of each item by toggling the favoriting icon on the item card anywhere in the webpage (not just within the favorites list webpage)
+                            </li>
+                            <li>Easy way to remove all favorites, since this was not available in any of the webpages researched
+                            </li>
+                            <li>Visible and easily accessible 'favorites' list (unlike facebook's, which required 5 clicks across different pages)
+                            </li>
+                            <li>Convention and Affordances, such as the use of shadow under the "favoriting" button to indicate that it is clickable, and changing the color of a button + pointer to a cursor when the user hovers their mouse over a clikable element.
+                            </li>
+                            <li>Explanatory tags that accompany the "favoriting" button, providing users with a clear description of what clicking the button will do
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
             <div class="row space-md">
-                <div class="col-md-8">
-                    <h3>Gets pretty deep but they also know how to have a good time, so we imagined a refreshing and fun visual representation of their decentralized world.</h3> </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <figure> <img src="img/photo-1484755560615-a4c64e778a6c.jpg" alt="" class="img-fluid"> </figure>
-                </div>
-                <div class="col-md-6">
-                    <figure> <img src="img/photo-1558180702-95f1c3ae2ca3.jpg" alt="" class="img-fluid"> </figure>
+                <div class="col-md-10">
+                    <p class="h3">Development</p>
+                    <p class="lead mt-3">Using React, I constructed my Web App. Here is the <a class="not-header" href="https://development-woad-five.vercel.app/">final result!</a></p> 
                 </div>
             </div>
+            <figure class="text-center"> <img src="img/movie-summary.png" alt="" class="img-fluid summary"> </figure>
+
         </div>
     </section>
     <!-- footer -->
@@ -95,34 +132,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="copy"> &copy; 2019 Sharebootstrap.com </div>
+                    <div class="copy"> &copy; zynang.com </div>
                 </div>
                 <div class="col-md-9">
-                    <h3 class="footer-title">We collaborate with ambitious brands and people.<br> let’s build something great together.</h3>
+                    <h3 class="footer-title">Always down to learn something new.<br> Let's chat about the intersection of tech 🖱, design ₊ ⊹ and ethics ⚖!</h3>
                     <div class="row mt-5">
-                        <div class="col-md-4">
-                            <h5>Start a conversation</h5>
+                        <div class="col-md-6">
+                            <h5>Other corners of the internet where I exist ( ˘ ³˘)♥︎ :</h5>
                             <ul class="list-unstyled p-0">
-                                <li class="#"><a href="mailto:hi@sharebootstrap.com" target="_blank" data-bypass="">hi@</a>
+                                <li class="social"><a href="https://www.instagram.com/zyn.yee" target="_blank" data-bypass="">Instagram [◉"]</a>
                                     <br> </li>
-                                <li class="#"><a href="mailto:hi@sharebootstrap.com" target="_blank" data-bypass="">dummy@</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h4>Portfolio sites</h4>
-                            <ul class="list-unstyled p-0">
-                                <li class="#"> <a href="#" target="_blank">sharebootstrap.com</a></li>
-                                <li class="#"><a href="#" target="_blank">codenpixel.com</a>
-                                    <br> </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h4>Quick links</h4>
-                            <ul class="list-unstyled p-0">
-                                <li class="#"><a href="#">contact</a></li>
-                                <li class="#"><a href="#">terms</a></li>
-                                <li class="#"><a href="#">faq</a></li>
-                                <li class="#"><a href="#">who we are</a></li>
+                                <li class="social"><a href="https://www.linkedin.com/in/zynyee/" target="_blank" data-bypass="">Linkedin 👥</a></li>
                             </ul>
                         </div>
                     </div>
@@ -130,6 +150,9 @@
             </div>
         </div>
     </footer>
+
+
+
     <!-- /main content -->
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
