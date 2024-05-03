@@ -170,9 +170,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var currentUrl = window.location.href;
 
     navItems.forEach(function(item) {
-        if (currentUrl.includes(item.getAttribute('href'))) {
+        if (currentUrl.includes(item.getAttribute('href')) ||
+            currentUrl.includes('movie.html') && item.getAttribute('href') === 'index.html' ||  
+            currentUrl.includes('uno-health.html') && item.getAttribute('href') === 'index.html'  
+        ) {
             item.closest('.nav-item').classList.add('active');
         }
     });
 });
-
