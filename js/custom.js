@@ -126,7 +126,7 @@ function grid() {
             $(this).css('margin', items_margin + 'px');
 
             if (!height) $(this).css('height', 'auto');
-            if ($(this).hasClass('w2') && ww >= 500) $(this).css('width', (items_width * 2) + (items_margin * 2) + 'px');  /* Add w2 or h2 to the portfolio item for varoius layout sizes */
+            if ($(this).hasClass('w2') && ww >= 500) $(this).css('width', (items_width * 2) + (items_margin * 2) + 'px');  
             if ($(this).hasClass('h2') && ww >= 500) $(this).css('height', items_double_height + (items_margin * 2) + 'px');
         });
 
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // side bar
 $(document).ready(function(){
-    var offset = 110; // Adjust this if needed
+    var offset = 110; 
     var $window = $(window);
     var $document = $(document);
 
@@ -198,24 +198,24 @@ $(document).ready(function(){
     });
 
     $(window).on('load', function() {
-        var offset = 120; // Adjust this if needed
+        var offset = 120; 
     
         function checkActiveSection() {
             var scrollPos = $(window).scrollTop() + offset;
-            $('.sidebar .js-scroll-trigger').each(function() {  // Updated selector
+            $('.sidebar .js-scroll-trigger').each(function() {  
                 var currLink = $(this);
                 var refElement = $(currLink.attr("href"));
     
                 if (refElement.length === 0) {
                     console.log("Failed to find element for link: ", currLink.attr("href"));
-                    return; // Skip this iteration if the target element does not exist
+                    return; 
                 }
     
-                var elementTop = refElement.offset().top; // Using offset() might be more appropriate
+                var elementTop = refElement.offset().top; 
                 var elementBottom = elementTop + refElement.height();
     
                 if (elementTop <= scrollPos && elementBottom > scrollPos) {
-                    $('.sidebar .js-scroll-trigger').removeClass("active-link"); // Updated selector
+                    $('.sidebar .js-scroll-trigger').removeClass("active-link"); 
                     currLink.addClass("active-link");
                 } else {
                     currLink.removeClass("active-link");
@@ -224,6 +224,6 @@ $(document).ready(function(){
         }
     
         $(document).on("scroll resize", checkActiveSection);
-        checkActiveSection();  // Initial check
+        checkActiveSection();  
     });
 });
