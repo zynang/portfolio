@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MyMovieList | Zyn Ang</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fontawesome icons replacement -->
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+    <!-- Theme styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Your Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3" id="mainNav">
+        <div class="container"> <a class="navbar-brand js-scroll-trigger" href="index.html">Zyn Ang</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="index.html">Portfolio</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="about.html">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="https://drive.google.com/file/d/1fxEwgJT9A2oBcxfwfxvrIaOB9RIoyRux/view?usp=sharing">Resume</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container space-md">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="sidebar">
+                   
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#overview">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#competition">Competition</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#problem">Problem</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#designs">Initial Designs</a></li>
+                       
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wireframes"> Wireframes</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#prototypes"> Prototypes</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#final">Development</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#learnings"> Reflections</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10 ml-auto col-sm-12">
+                <!-- Main Content -->
+                <div class="headline-content mt-0 mb-3">
+                    <h1 class="headline-title display-3">MyMovieList</h1>
+                    <p class="headline-subtitle">A simple repository for you to store your favorite movies.</p>
+                </div>
+                <div class="row d-flex align-content-center space-top proj-body">
+                    <div class="col-md-3">
+                        <p class="lead">Role</p>
+                        <p>Designer</p>
+                        <p>Front-End Developer</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Date:</p>
+                        <p>Mar 2024</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Skills</p>
+                        <p>Web Design,</p><p>React, HTML/CSS, Figma</p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-11 mr-auto hero-image">
+                    <img src="img/movie-hero.png" alt="Hero Image">
+                </div>
+                <!--Content Section-->
+                <div class="content col-lg-10 mr-auto col-sm-12" >
+                    <p class="h1 section-header"id="overview" >Overview</p>
+                    <p class="lead mt-3">I love movies and the power they have to transport you to a whole new world. (My favorite movie is the Grand Budapest Hotel, a whimsical comedy mystery!) Out of a personal desire to remember the movies that I've seen and loved, I set out to create a web app that would serve as a movie repository. This project also served as an opportunity for me to hone my React development skills, and I practiced implementing features for aggregation, sorting, filtering, and interactivity
+                    </p>
+                    
+                </div>
+                <div class="content col-lg-10 mr-auto col-sm-12" id="competition">
+                    <p class="h1 section-header" >Competitive Landscape</p>
+                    <p class="lead mt-3">While there are many apps that serve a similar movie aggregation function, the most popular currently is <a class="not-header" href="https://letterboxd.com/">Letterboxd</a>. Letterboxd describes itself as a social network for film lovers, where users are able to keep track of and rate their favorite films, as well as write and share reviews with their friends and fellow members. This is my critique of Letterboxd's interface-- I focused specifically on functionalities related to Liking, Aggregating and Sorting movies.  </p>
+                    <div class="col-md-12 ml-auto">
+                        <figure>
+                            <img src="img/movie-crit.png" alt="" class="img-fluid">
+                        </figure>
+                    </div>
+                    <p class="lead mt-3">For a more robust research process, I also looked at other websites that had sorting and aggregating functionalities. I looked at <a class="not-header" href="https://open.spotify.com/">Spotify</a>, <a class="not-header" href="https://www.uniqlo.com/us/en/">Uniqlo</a> and <a class="not-header" href="https://www.facebook.com/">Facebook</a>, and critiqued each of their design. I chose those three websites because of the diversity of industry and function that they represent.</p>
+                    <div class="col-md-10 mx-auto">
+                        <figure>
+                            <img src="img/movie-spotify.png" alt="" class="img-fluid">
+                        </figure>
+                        <figure>
+                            <img src="img/movie-uniqlo.png" alt="" class="img-fluid">
+                        </figure>
+                        <figure>
+                            <img src="img/movie-facebook.png" alt="" class="img-fluid">
+                        </figure>
+                    </div>
+                </div>
+                <div class="content col-lg-10 mr-auto col-sm-12" id="problem">
+                    <p class="h1 section-header">Problem</p>
+                    <p class="lead mt-3">With the competitive analysis completed, I had a better grasp of how aggregation functionalities were designed in industry, and an understanding of what I liked vs what I did not. Since I wanted to create a repository for movies specifically, I combined those insights with my analysis of Letterboxd. This helped me crystallize what my next steps would be in the design process.  </p>
+                    
+                    <p class="h4 section-header">To summarize my task at hand:</p>
+                    <div class="problem-explore row">
+                        <div class="col-lg-3 sm-12">
+                            <h4 class="small-header">🚩Problem</h3>
+                        </div>
+                        <div class="col-lg-9 sm-12">
+                            <p class="lead mt-1">I love movies but tend to forget which ones I've watched. Letterboxd and other websites with aggregation tools tend to have a distracting number of functionalities, which makes it difficult for users to find their 'list of favourites'. Existing sites also have overly-complicated designs for liking/unliking an item. 
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="problem-explore row">
+                        <div class="col-lg-3 sm-12">
+                            <h4 class="small-header">🎯Objective</h3>
+                        </div>
+                        <div class="col-lg-9 sm-12">
+                            <p class="lead mt-1">I want to create a simple website that can serve as a repository of the movies I've seen, with a 1-click ability to "like"/"unlike" movies. The website should be free of clutter, and it should be extremely easy for me to see which movies I have put in my 'favourites list'. I should also be able to filter/sort the movies by different characteristics.
+                            </p>
+                            
+                        </div>
+                    </div>
+                    <div class="problem-explore row">
+                        <div class="col-lg-3 sm-12">
+                            <h4 class="small-header">👍Success Metrics</h3>
+                        </div>
+                        <div class="col-lg-9 sm-12">
+                            <p class="lead mt-1">
+                                <ul class="my-list">
+                                    <li>1-click "like"/"unlike" function</li>
+                                    <li>Ability to sort and filter movies</li>
+                                    <li>Ability to see the list of "liked" movies on the same page</li>
+                                </ul>
+                            </p>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+                <div class="content col-lg-10 mr-auto col-sm-12" id="designs">
+                    <p class="h1 section-header">Initial Designs</p>
+                    <p class="lead mt-3">As part of my redesign process, I started by hand-sketching some possible ideas for the layout.
+                    </p>
+                    <div class="col-lg-10 mx-auto hero-image">
+                        <img src="img/sketch-movie].jpg" alt="Hero Image">
+                    </div>
+                    <p class="lead mt-3">Of the 4 designs, I preferred the shopping cart style for its clean and intuitive design. It was also the one that was most suited to my current competency with React.</p>
+                    
+                </div>
+
+
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="wireframes">
+                    <p class="h1 section-header">Wireframes</p>
+                    <p class="lead mt-3">Using Figma, adapted my shopping cart design into a low-fidelity wireframe.</p>
+                    <div class="row text-center">
+                        <div class="col-md-12 mr-auto figma-box">
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FMR0h8iCq96xVzRnuIzrzBx%2FUntitled%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DckKzFnvlgOjqVAfk-1" allowfullscreen></iframe>
+                        </div>                       
+                    </div>
+                    <p class="lead mt-3">I shared my wireframe with some peers for their feedback. They commented that it was clean and the functionality of the website was easily understood. This validated my hypothesis that the shopping cart style would work well for intuitiveness, since it borrows heavily from convention popularised by e-commerce website styles that users would already be familiar with. </p>
+
+                </div>
+
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="prototypes">
+                    <p class="h1 section-header">Prototypes</p>
+                    <p class="lead mt-3 ">Thereafter, I translated the low-fidelity wireframes into a high-fidelity prototype. I focused on using color to add warmth and improve aesthetics, and designing with good affordance. I chose a light-mode design, since Letterboxd's dark mode was personally unpleasant.</p>
+                    <div class="row text-center">
+                        <div class="col-md-12 mr-auto figma-box">
+                            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FMR0h8iCq96xVzRnuIzrzBx%2FUntitled%3Ftype%3Ddesign%26node-id%3D2%253A172%26mode%3Ddesign%26t%3DckKzFnvlgOjqVAfk-1" allowfullscreen></iframe>
+                        </div>                       
+                    </div>
+
+
+                   
+                   
+
+                </div>
+
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="final">
+                    <p class="h1 section-header">Development</p>
+                    <p class="lead mt-3">Using React, HTML/CSS and JavaScript, I translated the high-fidelity prototype into a functional <a class="not-header" href="https://development-woad-five.vercel.app/">webpage!</a> Please feel free to play around and interact with the different functionalities (sorting, filtering and aggregating) of the website.</p>
+                    <div class="row text-center">
+                        <div class="col-md-12 mr-auto figma-box">
+                            <video autoplay muted loop class="responsive-video">
+                                <source src="img/movies.mp4" type="video/mp4" >
+                            </video>
+                        </div>
+                    </div>
+                    <h4 class="section-header">Webpage Highlights</h4>
+                    <p class="lead mt-3">I wanted to take this assignment as an opportunity to practice coding in React and implementing different functionalities. Therefore, I used a mix of different efficiency-maximizing strategies to create the webpage, such as a json file to store movie data easily and the use of React components to allow keep functions independent and reusable. These implementation strategies helped me to create the following features in the website!</p>
+                    <div class="col-md-12 mx-auto">
+                        <figure>
+                            <img src="img/movie-summaryy.png" alt="" class="img-fluid">
+                        </figure>
+                        
+                    </div>
+                    
+                    
+
+                </div>
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="learnings">
+                    <p class="h1 section-header">Reflections</p>
+                    <p class="lead mt-3 ">As someone fairly new to React, this project taught me many new skills and gave me confidence to implement more complex React-based functionalities. I am particularly proud of the sorting/filtering functions, and their ability to work simultaneously.
+                    </p>
+                    <p class="h4 section-header">Future Direction</p>
+                    <p class="lead mt-3 "> In a future design sprint, I would love to keep building out the webpage to:</p>
+                        <ul class="my-list">
+                            <li>Allow users to add new movies to the webpage, through the implementation of either a backend database of movies, or leveraging an open-source API of movies</li>
+                            <li>Allow multiple users to use the webpage at once, such that the web app works based on user profile and a unique database for each user</li>
+                            <li>Include a simple button to reset all filters and sorts</li>
+                        </ul>
+
+                    <p class="lead mt-3 ">
+                        Thank you for taking this design journey with me! I hope you enjoyed it :)
+                    </p>
+                    <div class="col-md-10 mx-auto">
+                        <figure>
+                            <img src="img/151051.gif" alt="" class="img-fluid">
+                        </figure>
+                    </div>
+                
+
+                </div>
+
+                    
+                
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer pb-5">
+        <div class="my-footer container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="copy">Made with 💖 by Zyn</div>
+                    <p class="copyright">With elements from<br>sharebootstrap.com</p>
+                </div>
+                <div class="col-md-9">
+                    <h3 class="footer-title">Always down to learn something new.<br> Let's chat about the intersection of tech 🖱, design ₊ ⊹ and ethics ⚖!</h3>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h5>Other corners of the internet where I exist ( ˘ ³˘)♥︎ :</h5>
+                            <ul class="list-unstyled p-0">
+                                <li class="social"><a href="https://www.instagram.com/zyn.yee" target="_blank" data-bypass="">Instagram [◉"]</a>
+                                    <br> </li>
+                                <li class="social"><a href="https://www.linkedin.com/in/zynyee/" target="_blank" data-bypass="">Linkedin 👥</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

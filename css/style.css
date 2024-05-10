@@ -2,7 +2,7 @@
 
 ShareBootstrap - Minimal portfolio Template v1.0.0 (https://sharebootstrap.com)
 Copyright 2019 Sharebootstrap.com
-Licensed under  CC BY 3.0 
+Licensed unnder  CC BY 3.0 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -43,16 +43,18 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
     margin-bottom: .5rem;
     font-weight: 600;
-    line-height: 1.64;
+    line-height: 1.8;
 }
 
 a {
     color: inherit;
     cursor: pointer;
 }
+
 
 .not-header{
     text-decoration: none;
@@ -64,6 +66,10 @@ a {
 
 .not-header:hover{
     color:inherit;
+}
+
+.problem-explore{
+    padding-bottom: 40px;
 }
 
 a:hover {
@@ -212,14 +218,49 @@ Navigation
     color: black;
     left: 50%;
     background: black;
-    transition: width .2s ease-in-out, left .2s ease-in-out; /* Smooth transition for width and horizontal position */
+    transition: width .2s ease-in-out, left .2s ease-in-out; 
 }
 
 .navbar-nav li a:hover::after,
-.navbar-nav li.active a::after { /* Apply underline for active link */
+.navbar-nav li.active a::after { 
     width: 100%; 
     left: 0; 
 }
+
+/*//////////
+Project body
+//////////*/
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin:0;
+    padding: 0;
+}
+
+.hero-image{
+    padding: 0;
+}
+
+.proj-body {
+    line-height: 2em;
+    padding-bottom: 20px;
+    color: var(--text-grey);
+}
+
+.proj-body-box {
+    border: 3px solid var(--primary-color);
+    padding: 1.1em;
+    border-radius: 10px;
+    color: var(--primary-color);
+    margin: 3em 0;
+}
+
+.proj-body li {
+    margin: 1.1em 0;
+}
+
 
 
 /*/////////////////////
@@ -262,15 +303,29 @@ Header intro
 }
 
 .image-container {
-    padding: 10px; /* Adds space around the image */
+    padding: 10px; 
     display: flex;
-    justify-content: center; /* Centers the image in the column */
+    justify-content: center; 
 }
 .image-container img {
-    max-width: 80%; /* Reduces the maximum width of the image to 80% of the container */
-    height: auto; /* Keeps the image ratio */
+    max-width: 80%; 
+    height: auto;
 }
 
+.section-header{
+    font-weight: 800;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.small-header{
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.content{
+    padding: 0;
+}
 
 
 /* Portfolio */
@@ -352,11 +407,35 @@ Header intro
     bottom: 0;
     left: 0;
     z-index: 1;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
+}
+
+#uno{
+    background-color: #D5E8D1;
+}
+
+#movie{
+    background-color: #FFE8F6;
+}
+
+#ny{
+    background-color: #FFFBC7;
+}
+
+#brain{
+    background-color: #CFF0FF;
+}
+
+#hpotter{
+    background-color: #FFD5A4;
+}
+
+#sars{
+    background-color: #E2DAFF;
 }
 
 .entry:hover .work-entry-hover {
@@ -439,11 +518,18 @@ Header intro
 }
 
 .copy {
-    font-weight: 600;
+    margin-top: 12px;
+    font-weight: 700;
     color: #000;
+    margin-bottom: 10px;
 }
 
 
+.copyright{
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 19px;
+}
 /* Conatact */
 
 .contact .form-control {
@@ -468,10 +554,11 @@ Header intro
 /* Content */
 .img-fluid{
     border-radius: 20px;
-    border: solid var(--primary-color) 5px;
+    border: transparent;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
 }
 
 .summary{
@@ -513,4 +600,37 @@ Header intro
 .multi-use li.title {
     font-weight: 400;
     padding: 0px 0 22px;
+}
+
+.my-list{
+    font-size: large;
+    line-height: 2;
+}
+
+
+.sidebar {
+    position: sticky;
+    top: 180px; 
+    height: calc(100vh - 100px); 
+    overflow-y: auto; 
+}
+
+.active-link {
+    font-weight: 800;
+}
+
+.figma-box{
+    margin-top: 20px;
+}
+
+.my-footer{
+    border-top: 1px solid darkgray;
+    padding-top: 40px;
+}
+
+.responsive-video {
+    width: 100%;    
+    height: auto;   
+    max-width: 800px;
+    margin: auto;  
 }
