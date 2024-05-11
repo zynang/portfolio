@@ -473,7 +473,7 @@ Header intro
     top: 15px;
     -webkit-transition: all .5s cubic-bezier(0.4, .2, 0, 1) .3s;
     transition: all .5s cubic-bezier(0.4, .2, 0, 1) .3s;
-    color: #4d5d53;
+    color: black;
     right: 5%
     
 }
