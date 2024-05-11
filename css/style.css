@@ -474,8 +474,20 @@ Header intro
     -webkit-transition: all .5s cubic-bezier(0.4, .2, 0, 1) .3s;
     transition: all .5s cubic-bezier(0.4, .2, 0, 1) .3s;
     color: black;
-    right: 5%
+    right: 5%;
+    border-radius: 8px;
+    padding: 6px;
+    width: fit-content;
+    background-color: white;
+    margin-right:10px;
+    text-align: center;
     
+}
+
+.work-row {
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
 }
 
 .entry:hover .work-entry-title,
