@@ -270,6 +270,7 @@ Header intro
 .headline-content .headline-title {
     font-weight: 900;
     margin-bottom: 20px;
+    
 }
 
 .headline-subtitle {
@@ -320,7 +321,8 @@ Header intro
 /* Portfolio */
 
 #portfolio-filters {
-    margin-bottom: 50px
+    margin-bottom: 50px;
+    
 }
 
 
