@@ -43,14 +43,15 @@
                    
                     <ul class="nav flex-column">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#overview">Overview</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#user">Hypotheses</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#problem">Methods</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#designs">Results</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hypo">Hypotheses</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#data">Data</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#methods">Methods</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#results">Results</a></li>
                        
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#wireframes"> Conclusion</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#prototypes"> Limitations</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#final">Future Direction</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#learnings"> Reflections</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#conclusion"> Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#limitations"> Limitations</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#future">Future Direction</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -58,7 +59,7 @@
                 <!-- Main Content -->
                 <div class="headline-content mt-0 mb-3">
                     <h1 class="headline-title display-3">Harry Potter and the Prisoners of Data Science</h1>
-                    <p class="headline-subtitle">Analysing Harry Potter movie scripts using Hypothesis Testing and ML</p>
+                    <p class="headline-subtitle">Analysing Harry Potter movie scripts using Hypothesis Testing and Machine Learning</p>
                 </div>
                 <div class="row d-flex align-content-center space-top proj-body">
                     <div class="col-md-3">
@@ -71,8 +72,12 @@
                         <p>Feb to May 2024</p>
                     </div>
                     <div class="col-md-3">
+                        <p class="lead">Team</p>
+                        <p>Toshiki Kato,<br>Raphael Li</p>
+                    </div>
+                    <div class="col-md-3">
                         <p class="lead">Skills</p>
-                        <p>Hypothesis Testing, Python,</p><p>Linear Regression, Data Visualization</p>
+                        <p>Python, Hypothesis Testing,</p><p>Linear Regression, Data Visualization</p>
                         
                     </div>
                 </div>
@@ -82,13 +87,23 @@
                 <!--Content Section-->
                 <div class="content col-lg-10 mr-auto col-sm-12" >
                     <h1 class="section-header"id="overview" >Overview</h1>
-                    <p class="lead mt-3">In this project, I set out to redesign the homepage of my high school's (<a class="not-header" href="https://en.nygh.moe.edu.sg/">Nanyang Girls' High School</a>) website. This school is home to all of my fondest memories, and I do not think that her current website adequately captures all the joy, creativity, and excellence that she inspires. 
-                        Currently, it is a visually uninteresting website which fails to highlight key information that primary users would be interested in. </p>
+                    <p class="lead mt-3">As avid Potterheads, our team wanted to discover the underlying relationships between factors in the Harry Potter universe using quantitative methods. We were specifically interested in analyzing the differences in values between the views of the author, movie directors and the fanbase in Harry Potter. How does J.K. Rowling choose romantic pairings? Which characters have made the greatest impression on the fans? And is there a correlation to be found between these factors?                    </p>
                     
                 </div>
-                <div class="content col-lg-10 mr-auto col-sm-12" id="user">
-                    <h1 class="section-header" >User Research</h1>
-                    <p class="lead mt-3">Nanyang Girls' High School is a premier independent school in Singapore. It has a rich and proud bicultural history, and is one of the oldest schools in the country. The school website primarily serves as a point of information and a collection of resources for three groups of users:</p>
+                <div class="content col-lg-10 mr-auto col-sm-12" id="problem">
+                    <h1 class="section-header" >Hypotheses</h1>
+                    <p class="lead mt-3">Based on our interests, we had 3 main research hypotheses:</p>
+                    <ol>
+                        <li class="lead mt-3"><b>There exists a positive correlation between the frequency a character appears and the number of characters they share scenes with in total.👯</b></li>
+                        <li class="lead mt-3"><b>There exists no correlation between the number of times a character appears and their popularity among the fanbase.💖</b></li>
+                        <li class="lead mt-3"><b>There exists a positive correlation between the frequency that two characters share a scene and the presence of a romantic relationship between them.🌹</b></li>
+                    </ol>
+                    
+                    
+                </div>
+                <div class="content col-lg-10 mr-auto col-sm-12" id="data">
+                    <h1 class="section-header" >Data Collection</h1>
+                    <p class="lead mt-3">We decided to focus our attention on the movie scripts of the franchise, and webscrapped them from this <a class="not-header" href="https://zynang.github.io/ny-redesign/">Warner Bros wiki site</a>. We also webscraped the results of a fan vote from an IMDB poll, for our analysis of the correlation between character appearances and popularity among the fanbase.</p>
                     <div class="col-md-12 ml-auto">
                         <figure>
                             <img src="img/ny-users.png" alt="user overview" class="img-fluid">
@@ -101,52 +116,7 @@
                         </figure>
                     </div>
                 </div>
-                <div class="content col-lg-10 mr-auto col-sm-12" id="problem">
-                    <h1 class="section-header" >Exploring the Problem</h1>
-                    <p class="lead mt-3">With the needs and interview responses of these key users in mind, I identified the following problems with the current website:</p>
-                    <div class="col-md-12 ml-auto">
-                        <figure>
-                            <img src="img/ny-problem1.png" alt="problems with webpage 1" class="img-fluid">
-                        </figure>
-                        <figure>
-                            <img src="img/ny-problem2.png" alt="problems with webpage 2" class="img-fluid">
-                        </figure>
-                    </div>
-                    <h4 class="section-header">To summarize...</h4>
-                    <div class="problem-explore row">
-                        <div class="col-lg-3 sm-12">
-                            <h4 class="small-header">🚩Problem</h4>
-                        </div>
-                        <div class="col-lg-9 sm-12">
-                            <p class="lead mt-1">The current website of Nanyang Girls' High School is bland, unmemorable, and fails to prioritize the correct pieces of information. The design of the buttons and interactive elements also lack affordance.
-                            </p>
-                            
-                        </div>
-                    </div>
-                    <div class="problem-explore row">
-                        <div class="col-lg-3 sm-12">
-                            <h4 class="small-header">🎯Objective</h4>
-                        </div>
-                        <div class="col-lg-9 sm-12">
-                            <p class="lead mt-1">To redesign the website such that it is 1) Memorable 2) Prioritizes information relevant to the primary users 3) Representative of the school's culture and spirit.
-                            </p>
-                            
-                        </div>
-                    </div>
-                    <div class="problem-explore row">
-                        <div class="col-lg-3 sm-12">
-                            <h4 class="small-header">👍Success Metrics</h4>
-                        </div>
-                        <div class="col-lg-9 sm-12">
-                            <p class="lead mt-1">
-                                A responsive web design that supports memorability and user efficiency. Popular information (such as Announcements) should only be 1-click away.
-                                
-                            </p>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
+               
                 
 
                 <div class="content col-lg-10 mr-auto col-sm-12" id="designs">
