@@ -227,3 +227,53 @@ $(document).ready(function(){
         checkActiveSection();  
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const hoverElements = document.querySelectorAll('.hover-effect');
+  
+    hoverElements.forEach(element => {
+      element.addEventListener('mousemove', (e) => {
+        const sparkle = document.createElement('span');
+        sparkle.classList.add('sparkle');
+        sparkle.style.backgroundImage = `url(${element.getAttribute('data-image')})`;
+  
+        const rect = element.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+  
+        sparkle.style.left = `${x}px`;
+        sparkle.style.top = `${y}px`;
+        element.appendChild(sparkle);
+  
+        setTimeout(() => {
+          sparkle.remove();
+        }, 1000); // Remove sparkle after animation
+      });
+    });
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const myNameElement = document.querySelector('.my-name');
+    const hoverContainer = document.getElementById('hover-container');
+
+    myNameElement.addEventListener('mouseover', () => {
+        const rect = myNameElement.getBoundingClientRect();
+        const parentRect = myNameElement.parentElement.getBoundingClientRect();
+        
+        const leftPosition = rect.left - parentRect.left + 70;
+        const topPosition = rect.top - parentRect.top - 70;
+
+        console.log(`Left: ${leftPosition}, Top: ${topPosition}`); // Log positions
+
+        hoverContainer.style.left = `${leftPosition}px`;
+        hoverContainer.style.top = `${topPosition}px`;
+        hoverContainer.style.visibility = 'visible';
+    });
+
+    myNameElement.addEventListener('mouseout', () => {
+        hoverContainer.style.visibility = 'hidden';
+    });
+});
+
