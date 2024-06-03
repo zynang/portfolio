@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
-    <title>SARS Cov-2 Classification | Zyn Ang</title>
+    <title>Harry Potter and Data Science | Zyn Ang</title>
      <!-- Bootstrap core CSS -->
      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
@@ -17,8 +17,278 @@
 </head>
 
 <body>
-    <h4 class="section-header construction">I'm sorry, this page is still undergoing construction! ~(>_<。)</h4>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3" id="mainNav">
+        <div class="container"> <a class="navbar-brand js-scroll-trigger" href="index.html">Zyn Ang</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="index.html">Portfolio</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="about.html">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="https://drive.google.com/file/d/1fxEwgJT9A2oBcxfwfxvrIaOB9RIoyRux/view?usp=sharing">Resume</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container space-md">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="sidebar">
+                   
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#overview">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hypo">Our Hypotheses</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#data">Data</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#methods">Methods</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#results">Results</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#limitations"> Limitations</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#reflect">Reflection</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10 ml-auto col-sm-12">
+                <!-- Main Content -->
+                <div class="headline-content mt-0 mb-3">
+                    <h1 class="headline-title display-3">Harry Potter and the Prisoners of Data Science</h1>
+                    <p class="headline-subtitle">Analysing Harry Potter movie scripts using hypothesis testing and machine learning</p>
+                </div>
+                <div class="row d-flex align-content-center space-top proj-body">
+                    <div class="col-md-3">
+                        <p class="lead">Role</p>
+                        <p>Data Scientist</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Date:</p>
+                        <p>Feb to May 2024</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Team</p>
+                        <p>Toshiki Kato,<br>Raphael Li</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Skills</p>
+                        <p>Web-Scraping, SQL,</p><p>Machine Learning, Data Viz</p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-11 mr-auto hero-image">
+                    <img src="img/hero-harry.png" alt="harry potter hero image">
+                </div>
+                <!--Content Section-->
+                <div class="content col-lg-10 mr-auto col-sm-12" >
+                    <h1 class="section-header"id="overview" >Overview</h1>
+                    <p class="lead mt-3">As Potterheads🪄, our team wanted to explore the various relationships in the Harry Potter universe using quantitative methods. We were specifically interested in analyzing the differences in values between the views of the author, movie directors and the fanbase in Harry Potter. How does J.K. Rowling choose romantic pairings? Which characters have made the greatest impression on the fans? And is there a correlation to be found between these factors?                    </p>
+                    
+                </div>
+                <div class="content col-lg-10 mr-auto col-sm-12" id="hypo">
+                    <h1 class="section-header" >Our Hypotheses</h1>
+                    <p class="lead mt-3">Based on our interests, we had 4 research hypotheses:</p>
+                    <ol>
+                        <li class="lead mt-3">👯There exists a <b>positive correlation</b> between the <b>frequency that a character appears</b> and the <b>total number of characters they share scenes with</b>.</li>
+                        <li class="lead mt-3">💖There exists <b>no correlation</b> between the <b>frequency that a character appears</b> and their <b>popularity among the fanbase</b>.</li>
+                        <li class="lead mt-3">🌹There exists a <b>positive correlation</b> between the frequency that <b>two characters share a scene</b> and the presence of a <b>romantic relationship between them</b>.</li>
+                        <li class="lead mt-3">🗣️There exists a <b>positive correlation</b> between the <b>frequency that a character appears</b> and the <b>number of times that they are mentioned by other characters</b>.</li>
+                    </ol>
+                    
+                    
+                </div>
+                <div class="content col-lg-10 mr-auto col-sm-12" id="data">
+                    <h1 class="section-header" >Data Collection</h1>
+                    <p class="lead mt-3">We decided to focus our attention on the movie scripts of the franchise, and webscrapped them from a fan-hosted <a class="not-header" href="https://zynang.github.io/ny-redesign/">Warner Bros Entertainment Wiki</a>. We also webscraped the results of a fan vote from an <a class="not-header" href="https://www.imdb.com/poll/cccGe9D3x18/results?ref_=po_sr">IMDB poll</a>, for our analysis of the correlation between character appearances and popularity among the fanbase.</p>
+                    
+                    <p class="lead mt-3">We used Python's BeautifulSoup package to parse the HTML of the wiki site and scrape all information related to the script, including scene data, speakers and dialogue. We used the same strategy to collect data on fan votes from the IMDB poll.</p>
+
+                    <p class="lead mt-3">We cleaned the raw data, then converted and sorted them into SQL databases for easy querying and manipulation.</p>
+                
+                    <div class="col-md-10 mx-auto">
+                        <figure>
+                            <img src="img/database.png" alt="annoted desktop design" class="img-fluid">
+                        </figure>
+                    </div>
+               </div>
+                
+
+                <div class="content col-lg-10 mr-auto col-sm-12" id="methods">
+                    <h1 class="section-header">Methods</h1>
+                    <p class="lead mt-3">We used a mix of hypothesis testing and machine learning methods to investigate each of our hypotheses. 
+                    </p>
+                    <div class="col-md-10 mx-auto">
+                        <img src="img/methids.png" alt="methods" class="img-fluid">
+                    </div>
+                    <p class="lead mt-3">We used Python's SciPy and Scikit-Learn libraries to conduct these tests. Below is a more in-depth discussion of our rationale for each of these tests. Feel free to skip to <a class="not-header js-scroll-trigger" href="#results">Results!</a></p>
+                    <h4 class="section-header">Hypothesis #1</h4>
+                    <p class="lead mt-3">To test this hypothesis, we used Kendall's Rank Corrrelation Test. We used this statistical test because</p>
+                    <ol>
+                        <li class="p lead mt-3"><b>Continuous / Ordinal Variables:</b> The variables are continuous and Kendall's is suitable for measuring the relationship between 2 continuous variables</li>
+                        <li class="p lead mt-3"><b>Variables are NOT normally distributed:</b> The distribution of the variables instead resemble negative exponential distributions with a few outliers</li>
+                    </ol>
+                    <p class="lead mt-3">We also considered Chi-Squared Independence Tests and Pearson's Correlation, but those tests were not suitable for the distribution and nature of our variables.</p>
+                    
+                    <h4 class="section-header">Hypothesis #2</h4>
+                        <p class="lead mt-3">To test this hypothesis, we used Kendall's Rank Corrrelation Test and Linear Regression. We chose Kendall's Rank test because of the same rationale as above. As for linear regression, we used it because it is suitable for correlation testing.</p>
+                        
+                        <p class="lead mt-3">We also attempted Kmeans clustering on the dataset using these two variables as the axis but ran into an issue where it created clusters that were much closer in similarity than we expected and appeared partially random.</p>
+
+                    <h4 class="section-header">Hypothesis #3</h4>
+                        <p class="lead mt-3">To test this hypothesis, we used a Point Biserial Test. We used this statistical test because</p>
+                        <ol>
+                            <li class="p lead mt-3"><b>Continuous Variable and Dichotomous Variable:</b> The variables in our test are continous (the number of times two characters share a scene) and dichotomous (the presence of a romantic relationship between them). The point-biserial test is specially designed to derive the correlation of 2 such variables</li>
+                            <li class="p lead mt-3"><b>Variables are NOT normally distributed:</b> Although the point-biserial is considered a special case of Pearsons correlation, it does not necessarily assume that the continuous variable follows a normal distribution. Nevertheless, we acknowledge that it is classically used to measure data with normal distributions</li>
+                        </ol>
+                        <p class="lead mt-3">We also considered Mutual Information, but were unable to obtain meaningful results from the test.</p>
+
+                    <h4 class="section-header">Hypothesis #4</h4>
+                    <p class="lead mt-3">To test this hypothesis, we used Linear Regression. We chose linear regression, because it is suitable for correlation testing.</p>
+                    
+                    <p class="lead mt-3">We also considered clustering to see if there were certain distinct groupings of characters (ex. minor vs main characters), but we thought that linear regression would have the most insights.</p>
+                    
+                </div>
+
+
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="results">
+                    <h1 class="section-header">Results</h1>
+                    <p class="lead mt-3">Through conducting hypothesis testing and machine learning, we were able to test the validity of our hypotheses. The following are our results for each hypothesis, with accompanying visualizations created with MatPlotLib and Seaborn:</p>
+                    <h4 class="section-header">Hypothesis #1</h4>
+                    <p class="lead mt-3"><b>✅There exists a positive correlation between the frequency a character speaks and the number of characters they share a scene with.</b> </p>
+                    <div class="col-md-6 mx-auto">
+                        <img src="img/hypo_1.png" alt="hypo 1 results" class="img-fluid">
+                    </div>
+                    <p class="lead mt-3">Based off a significance threshold of 0.05, the results of Kendall's Rank Correlation test reveal that the observed correlation is <b>statistically significant</b> and not likely due to random chance-- allowing us to reject the null hypothesis. The tau correlation coefficient value is also a moderately high, which suggests a <b>moderate positive correlation</b> between the two variables </p>
+
+                    <div class="col-md-10 mx-auto">
+                        <img src="img/hypo_3_scatterplot.png" alt="hypo 1 scatterplot" class="img-fluid">
+                    </div>
+                    <p class="lead mt-3">The graph above provides a useful visualization of the positive relationship between the two variables, with the best-fit line indicating the general trend.</p>
+
+                    <h4 class="section-header">Hypothesis #2</h4>
+                    <p class="lead mt-3"><b>❌There exists no correlation between the number of times a character appears and their popularity among the fanbase. 
+                    </b> </p>
+                    <div class="col-md-6 mx-auto">
+                        <img src="img/hypo_2.png" alt="hypo 2 results" class="img-fluid">
+                    </div>
+                    <p class="lead mt-3">Based off a significance threshold of 0.05, the results of Kendall's Rank Correlation test reveal that the observed correlation is <b>NOT statistically significant</b> and  likely due to random chance-- which means that we are unable to reject the null hypothesis. The tau correlation coefficient value is also low, which suggests a <b>weak positive correlation</b> between the two variables. </p>
+                    <p class="lead mt-3">The heatmap below visualizes the weak positive correlation between the two variables. A stronger correlation would have been represented by a darker shade of red</p>
+                    <div class="col-md-10 mx-auto">
+                        <img src="img/hypo_1_heatmap.png" alt="hypo 1 scatterplot" class="img-fluid">
+                    </div>
+                    <p class="lead mt-3">The scatterplot below reveals a random distribution of the datapoints, a feature of our dataset which makes it difficult to prove correlation between the two variables.</p>
+
+                    <div class="col-md-10 mx-auto">
+                        <img src="img/hypo_1_scatterplot.png" alt="hypo 1 scatterplot" class="img-fluid">
+                    </div>
+                    
+                    <h4 class="section-header">Hypothesis #3</h4>
+                    <p class="lead mt-3"><b>❌There exists no correlation between the frequency that two characters share a scene and the presence of a romantic relationship between them.</b> </p>
+                    <div class="col-md-6 mx-auto">
+                        <img src="img/hypo_3.png" alt="hypo 3 results" class="img-fluid">
+                    </div>
+                    <p class="lead mt-3">Based off a significance threshold of 0.05, the results of the Point Biserial test reveal that the observed correlation is <b>NOT statistically significant</b> and likely due to random chance-- which means that we are unable to reject the null hypothesis. The correlation coefficient value is also low, which suggests a <b>weak positive correlation</b> between the two variables. </p>
+
+                    <h4 class="section-header">Hypothesis #4</h4>
+                    <p class="lead mt-3"><b>✅There exists a positive, statistically significant relationship between the frequency a character speaks and the frequency at which they are mentioned by other characters.</b> </p>
+
+                    <div class="col-md-6 mx-auto">
+                        <img src="img/hypo_4.png" alt="hypo 3 results" class="img-fluid">
+                    </div>
+
+                    <p class="lead mt-3">Based off a significance threshold of 0.05, the results of Linear Regression reveal that the observed correlation is <b> statistically significant</b> and not likely due to random chance--  allowing us to reject the null hypothesis. The moderate R^2 value of 0.55 means that 55% of the variation in the frequency that a character is mentioned by other characters, can be explained by the frequency a character speaks. </p>
+                
+
+
+                </div>
+
+              
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="limitations">
+                    <h1 class="section-header">Limitations</h1>
+                    <p class="lead mt-3 ">Despite our best efforts, there were certain limitations we faced when trying to execute this project:</p>
+                    <ul class="my-list">
+                        <li class="p lead mt-3">We worked off an incomplete dataset-- we had comprehensive data on the first half of the franchise, but sparse data on the second half. This impacted the accuracy of our results.
+                        </li>
+                        <ul class="my-list">
+                            <li class="p lead mt-3">
+                                The franchise covers progressively more mature themes with each successive movie. As such, our dataset had incomplete information on romantic pairings
+                            </li>
+                        </ul>
+                        <li class="p lead mt-3">It was difficult to find a large open source dataset of fan votes for the Harry Potter characters. The site that we chose (IMDB) had only a total of 792 votes from users.
+                        </li>
+                        <li class="p lead mt-3">Not all characters overlapped with mentions and popularity votes within the IMDB poll-- some characters were deemed not important enough to vote about (e.g. The Sorting Hat).
+                        </li>
+                        
+                    </ul>
+                 
+                </div>
+
+
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="reflect">
+                    <h1 class="section-header">Reflection</h1>
+                    <p class="lead mt-3 ">I really enjoyed working on this project, because it allowed me to use practical data science skills on a topic that was interesting and enjoyable for me. The Harry Potter universe was a significant part of my childhood, and there were questions about the franchise that I've wondered about for a while that I managed to answer in this project through the use of data analysis.
+                    </p>
+                    <p class="h4 section-header">Future Direction</p>
+                    <p class="lead mt-3 "> To further iterate and improve on this project, I would work to expand the database so as to fill in all the gaps of missing information. I am also keen to use machine learning to conduct predictive analysis on questions such as the likelihood of a romantic relationship forming between two characters, or predicting if they would make it till the end of the series (or be unalived by JK Rowling) </p>
+                        
+
+                    <p class="lead mt-3 ">
+                        Thank you for sticking with me through the end of this project!
+                    </p>
+
+                    <div class="col-md-7 mx-auto">
+                        <figure>
+                            <img src="img/mischief.gif" alt="harry potter" class="img-fluid">
+                        </figure>
+                        <p class="d-flex justify-content-center">Mischief Managed🪄</p>
+                    </div>
+
+                   
+
+                </div>
+
+                    
+                
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer pb-5">
+        <div class="my-footer container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="copy">Made with 💖 by Zyn</div>
+                    <p class="copyright">With elements from<br>sharebootstrap.com</p>
+                </div>
+                <div class="col-md-9">
+                    <h3 class="footer-title">I'm always down to learn something new.<br> Let's chat about the intersection of tech 🖱, design ₊ ⊹ and ethics ⚖!</h3>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h5>Other corners of the internet where I exist ( ˘ ³˘)♥︎ :</h5>
+                            <ul class="list-unstyled p-0">
+                                <li class="social"><a href="https://www.instagram.com/zyn.yee" target="_blank" data-bypass="">Instagram [◉"]</a>
+                                    <br> </li>
+                                <li class="social"><a href="https://www.linkedin.com/in/zynyee/" target="_blank" data-bypass="">Linkedin 👥</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
