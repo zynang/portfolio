@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,14 +12,195 @@
      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
      <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
      <link href="css/style.css" rel="stylesheet">
- 
-
 
 </head>
 
 <body>
-    <h4 class="section-header construction">I'm sorry, this page is still undergoing construction! ~(>_<。)</h4>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3" id="mainNav">
+        <div class="container"> <a class="navbar-brand js-scroll-trigger" href="index.html">Zyn Ang</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="index.html">Portfolio</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="about.html">About</a> </li>
+                    <li class="nav-item"> <a class="nav-link js-scroll-trigger" href="https://drive.google.com/file/d/1fxEwgJT9A2oBcxfwfxvrIaOB9RIoyRux/view?usp=sharing">Resume</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container space-md">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="sidebar">
+                   
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#overview">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mindflex">Hacking the Mindflex</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#create">Creating the Visualization</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#final"> Final Product</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#learnings"> Reflections</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10 ml-auto col-sm-12">
+                <!-- Main Content -->
+                <div class="headline-content mt-0 mb-3">
+                    <h1 class="headline-title display-3">Mental State Visualizer</h1>
+                    <p class="headline-subtitle">Creative embedded systems project that combines art and technology to visualize your brain's electromagnetic activity.</p>
+                </div>
+                <div class="row d-flex align-content-center space-top proj-body">
+                    <div class="col-md-3">
+                        <p class="lead">Role</p>
+                        <p>Engineer, Designer</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Date:</p>
+                        <p>Oct - Dec 2024</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Team</p>
+                        <p>Haley Flores,<br>Joe Maffa,<br>Lynda Umuhoza</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="lead">Skills</p>
+                        <p>Arduino <br>Processing<br>Soldering and Metalwork</p>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-11 mr-auto hero-image">
+                    <img src="img/mindflex-hero.png" alt="Mindflex visualization">
+                </div>
+                <!--Content Section-->
+                <div class="content col-lg-10 mr-auto col-sm-12" >
+                    <h1 class="section-header"id="overview" >Overview</h1>
+                    <p class="lead mt-3">Interpreting brainwaves is often associated with clinical or scientific applications. Our team wanted to explore this concept from a more creative angle, focusing on the relationship between brainwaves, mental states, and how they can be visually interpreted in an accessible way.                    </p>
+                    <p class="lead mt-3">While researching ways to measure brain activity, we discovered that many advanced devices were beyond our budget. Fortunately, we found an unexpected solution in the <a class="not-header" href="https://store.neurosky.com/products/mindflex">Mindflex</a>, a toy released by Mattel in 2009. Mindflex uses an EEG headset to register brainwaves, allowing users to manipulate an air stream and guide a foam ball through an obstacle course by concentrating.</p>
+                    <p class="lead mt-3">We chose to use art as the medium to visualize and communicate what these brainwaves represent-- our efforts culminating in this project!</p>
+                    
+                </div>
+                <div class="content col-lg-10 mr-auto col-sm-12" id="mindflex">
+                    <h1 class="section-header" >Hacking The Mindflex</h1>
+                    <p class="lead mt-3">Following this <a class="not-header" href="https://frontiernerds.com/brain-hack">tutorial</a> by FrontierNerds, we hacked the Mindflex and connected it to an Arduino, allowing us to “peek” at the brainwave activity data the chip processes. This was also a great opportunity for us to pick up new skills such as metalwork and soldering!</p>
+                    <div class="col-md-10 mx-auto">
+                        <figure>
+                            <img src="img/tutorial.png" alt="schematic depiction of arduino connection to mindflex" class="img-fluid">
+                            
+                        </figure>
+                        <figure>
+                            <img src="img/mindflex-process.png" alt="photo of us working on it" class="img-fluid">
+                            
+                        </figure>
+                    </div>
+                    <p class="lead mt-3">We found that the EEG chip detected brainwave activity through electrical signals at different frequencies. For our project, we chose to focus on three key frequencies where we observed the most significant changes: Attention (Low Beta frequencies, 13-17Hz), Meditation (Theta frequencies, 4-7Hz), and Delta frequencies (1-3Hz).</p>
+                </div>
+
+                <div class="content col-lg-10 mr-auto col-sm-12" id="create">
+    
+                    <h1 class="section-header">Creating the Visualization</h1>
+                    <p class="lead mt-3">After we retrieved the brainwave activity data via the Arduino software, we proceeded to translate the datastream into an interactive visualization using <a class="not-header" href=https://processing.org/Processing>Processing</a>. The relationship between the Mindflex headset, Arduino, and visualization is depicted in the following architecture diagram:</p>
+                    <div class="col-md-10 mx-auto">
+                        <figure>
+                            <img src="img/mindflex-archi.png" alt="architectural diagram of project" class="img-fluid">
+                            
+                        </figure>
+                    </div>
+                    <p class="lead mt-3">In Processing, we converted the values of the three key brainwave frequencies—Attention, Meditation, and Delta— into an interactive art display. The three key frequencies are represented by three colors respectively: Pink, Yellow, and Blue.</p>
+                        <div class="col-md-10 mx-auto">
+                            <figure>
+                                <img src="img/pinkyellowblue.png" alt="representation of brain waves" class="img-fluid">
+                                
+                            </figure>
+                        </div>
+                        <p class="lead mt-3">As the magnitude of brainwave activity changes at each frequency, the intensity and size of the corresponding color grow, creating a dynamic visual representation of the user’s dominant mental state. Additionally, the user can change the color scheme through button input, transforming the visualization into a captivating light show.</p>
+                    </div>
+                
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="final"> 
+
+                    <h1 class="section-header">Final Product</h1>
+                    <p class="lead mt-3">With everything in place, we demonstrated our project to our clasmates! We invited everyone to come up and try the headset, and watch as the colors on the visualization changed as they entered different mental states. We encouraged them to experience these different states by playing music that encouraged flow, and telling stories that evoked a certain emotional/mental response..</p>
+                    <div class="col-md-10 mx-auto">
+                        <figure>
+                            <img src="img/mindflex.gif" alt="gif of mindflex hack in action" class="img-fluid">
+                            <p>Here, a classmate tries on the headset, showing how the color intensities and sizes adjust in real time. The visualization indicates that 'Meditation' (Yellow) is the dominant mental state, highlighted by the increased intensity and width of the color.</p>
+                            
+                        </figure>
+                    </div>
+                </div>
+                    
+               
+                <div class="content col-lg-10 mr-auto col-sm-12"  id="learnings">
+                    <h1 class="section-header">Reflections</h1>
+                    <p class="lead mt-3 ">This project was a great opportunity for me to enjoy the creative process, as we worked together as a group to bring our ideas to reality.
+                    </p>
+                    <h4 class="section-header">Goals Met</h4>
+                    <p class="lead mt-3 ">We were able to fulfill our goals of...</p>
+                        <ul class="my-list">
+                            <li>Reading the intensity of brainwave activity by hacking a MindFlex headset in order to detect a change in mental state                            </li>
+                            <li>Visualizing brainwave data as an interactive visual display, with the intensity and size of the color section changing based on the changes in brain wave intensity</li>
+                            <li>Integrating button input as an interrupt that adjusts the color of the display 
+                            </li>
+                            <li>Integrating a WDT that resets the system upon detection of a system hang for more than 9 cycles</li>
+                            <li>Integrating WiFi into our project</li>
+                        </ul>
+                    <h4 class="section-header">Challenges</h4>
+                    <p class="lead mt-3 ">
+                        We encountered challenges in visualizing brainwave data, ultimately opting for Processing to convert Arduino-processed CSV data into a simple colored rectangle with smooth color blending and size adjustments, due to limited visualization options. We also struggled with serial communication and later pivoted to a WiFi implementation. Although we initially planned to use the Serial Monitor, we misunderstood the project requirements. Attempting to connect our web-app to the Arduino proved difficult, so we adapted by using random numbers from random.org to modify the visualization instead, building on existing lab code.
+                    </p>
+                    <h4 class="section-header">Final Thoughts</h4>
+                    <p class="lead mt-3 ">
+                       Nevertheless, I am very proud of what we created and I think we've learnt a lot through this project. Most of us had never done robotics or hardware engineering before, but we picked up skills along the way and made it happen!
+                    </p>
+                    <div class="col-md-7 mx-auto">
+                        <figure>
+                            <img src="img/mindflex-team.jpg" alt="our mindflex team" class="img-fluid">
+                        </figure>
+                        <p>Go team!ヾ(≧▽≦*)o</p>
+                    </div>
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer pb-5">
+        <div class="my-footer container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="copy">Made with ♡ by Zyn</div>
+                    <p class="copyright">With elements from<br>sharebootstrap.com</p>
+                </div>
+                <div class="col-md-9">
+                    <h3 class="footer-title">I'm always down to learn something new.<br> Let's chat about the intersection of tech 🖱, design ₊ ⊹ and ethics ⚖!</h3>
+                    <div class="row mt-5">
+                        <div class="col-md-6">
+                            <h5>Other corners of the internet where I exist ( ˘ ³˘)♥︎ :</h5>
+                            <ul class="list-unstyled p-0">
+                                <li class="social"><a href="https://www.instagram.com/zyn.yee" target="_blank" data-bypass="">Instagram [◉"]</a>
+                                    <br> </li>
+                                <li class="social"><a href="https://www.linkedin.com/in/zynyee/" target="_blank" data-bypass="">Linkedin 👥</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/custom.js"></script>
 </body>
 
 </html>
