@@ -277,3 +277,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+const dynamicText = document.getElementById('dynamicText');
+
+// Array of words to display
+const words = ['Naval Officer 𓊝﹏', 'Product Manager ❆', 'Designer 𓂃🖌', 'Friend ʕ•ﻌ•ʔ', 'Sister 𖠋𖠋'];
+let currentWordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    const currentWord = words[currentWordIndex];
+
+    // Typing or deleting based on `isDeleting` flag
+    if (isDeleting) {
+        dynamicText.textContent = currentWord.substring(0, charIndex--);
+    } else {
+        dynamicText.textContent = currentWord.substring(0, charIndex++);
+    }
+
+    // Set typing speed
+    let typingSpeed = isDeleting ? 50 : 100;
+
+    // When word is fully typed, pause before deleting
+    if (!isDeleting && charIndex === currentWord.length + 1) {
+        typingSpeed = 2000; // Pause before deleting
+        isDeleting = true;
+    }
+    // When word is fully deleted, move to the next word
+    else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentWordIndex = (currentWordIndex + 1) % words.length; // Cycle to the next word
+    }
+
+    // Recursively call the function with typingSpeed delay
+    setTimeout(typeEffect, typingSpeed);
+}
+
+// Start the typing effect
+typeEffect();

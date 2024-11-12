@@ -659,16 +659,15 @@ Header intro
     color: palevioletred;
 }
 
-.my-name:hover {
+/* .my-name:hover {
     transform: rotate(-10deg);
-}
+} */
 
 .hover-effect {
     position: relative;
     display: inline-block;
     cursor: pointer;
     /* color: #3D3D3D; */
-    transform: skewX(-8deg)
   }
   
 .sparkle {
@@ -706,4 +705,26 @@ animation: sparkle-animation 1s forwards;
 #hover-image {
     max-width: 100px; 
     max-height: 100px; 
+}
+
+
+.dynamic-text:hover{
+    cursor: pointer;
+}
+
+
+.dynamic-text {
+    border-right: 2px solid #3498db;
+    white-space: nowrap;
+    overflow: hidden;
+    /* display: inline-block; */
+    animation: blink 0.7s step-end infinite alternate;
+    min-width: 200px; /* Adjust based on the longest word */
+    text-align: left;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
