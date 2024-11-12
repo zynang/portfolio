@@ -326,6 +326,11 @@ Header intro
     
 }
 
+.grid {
+    padding-left: 5vw; /* 5% of the viewport width on the left */
+    padding-right: 5vw; /* 5% of the viewport width on the right */
+}
+
 
 /* portfolio filter */
 

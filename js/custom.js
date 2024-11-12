@@ -87,50 +87,56 @@ function imageBG() {
 /** ===================== */
 
 function grid() {
-
     var container = $('.grid');
 
     for (var i = 0; i < container.length; i++) {
         var active_container = $(container[i]);
         var container_width = active_container.width();
-
         var items = active_container.find('.entry');
 
-        var cols = parseInt(active_container.data('cols'), 10);
-        var margin = parseInt(active_container.data('margin'), 10);
+        var cols = parseInt(active_container.data('cols'), 15);
+        var margin = parseInt(active_container.data('margin'), 15);
         var height = parseFloat(active_container.data('height'));
         var double_height = parseFloat(active_container.data('double-height'));
 
         if (!margin) margin = 0;
         if (!double_height) double_height = 2;
 
-        // set margins to the container
-        active_container.css('margin', -Math.floor(margin / 2) + 'px');
-
-        if (ww >= 1000) {
-            if (!cols) cols = 3;
+        // Set default column count based on viewport width
+        if (ww >= 1200) {
+            cols = 2; // Set to 2 columns always for consistency, can adjust if needed
         } else if (ww >= 700) {
-            if (cols !== 1) cols = 2;
+            cols = 2;
         } else {
             cols = 1;
         }
 
+        // Calculate item width based on the number of columns
         var items_width = Math.floor((container_width / cols) - margin);
         var items_height = Math.floor(items_width * height);
         var items_double_height = items_height * double_height;
         var items_margin = Math.floor(margin / 2);
 
-        items.each(function() {
-            $(this).css('width', items_width + 'px');
-            $(this).css('height', items_height + 'px');
-            $(this).css('margin', items_margin + 'px');
+        // Center-align the grid by calculating leftover space and adjusting margin
+        var totalItemsWidth = (items_width * cols) + (margin * (cols - 1));
+        var leftoverSpace = container_width - totalItemsWidth;
+        active_container.css('margin-left', leftoverSpace / 2 + 'px');
 
+        // Apply item dimensions and spacing
+        items.each(function() {
+            $(this).css({
+                width: items_width + 'px',
+                height: items_height + 'px',
+                margin: items_margin + 'px'
+            });
+
+            // Special size adjustments
             if (!height) $(this).css('height', 'auto');
             if ($(this).hasClass('w2') && ww >= 500) $(this).css('width', (items_width * 2) + (items_margin * 2) + 'px');  
             if ($(this).hasClass('h2') && ww >= 500) $(this).css('height', items_double_height + (items_margin * 2) + 'px');
         });
 
-        // isotope
+        // Initialize Isotope
         active_container.isotope({
             itemSelector: '.entry',
             transitionDuration: '.2s',
@@ -142,25 +148,23 @@ function grid() {
             },
             masonry: {
                 columnWidth: items_width + margin
-                
             }
         });
 
+        // Filter functionality
         $('#filters li a').on('click', function(e) {
             e.preventDefault();
-
             var filter = $(this).attr('href');
-
             $('#filters li a').removeClass('active');
             $(this).addClass('active');
-
-            active_container.isotope({
-                filter: filter
-            });
+            active_container.isotope({ filter: filter });
         });
-    };
+    }
 
+    // Refresh layout after setting up
+    container.isotope('layout');
 }
+
 
 
 // Nav bar //
