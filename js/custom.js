@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const dynamicText = document.getElementById('dynamicText');
 
 // Array of words to display
-const words = ['naval officer', 'baker of sweet treats', 'friend', 'sister'];
+const words = ['Naval Officer ⚓️', 'Friend 👯‍♀️', 'Sister 👩🏻'];
 let currentWordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
